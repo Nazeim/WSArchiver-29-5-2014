@@ -1,0 +1,6 @@
+C:\Users\DN\Documents\Visual Studio 2010\Projects\CodeFuture\FtpConfig\FtpConfig\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\DN\Documents\Visual Studio 2010\Projects\CodeFuture\FtpConfig\FtpConfig\bin\Debug\FtpConfig.exe
+C:\Users\DN\Documents\Visual Studio 2010\Projects\CodeFuture\FtpConfig\FtpConfig\bin\Debug\FtpConfig.pdb
+C:\Users\DN\Documents\Visual Studio 2010\Projects\CodeFuture\FtpConfig\FtpConfig\obj\x86\Debug\FtpConfig.exe
+C:\Users\DN\Documents\Visual Studio 2010\Projects\CodeFuture\FtpConfig\FtpConfig\obj\x86\Debug\FtpConfig.pdb
+C:\Users\DN\Documents\Visual Studio 2010\Projects\CodeFuture\FtpConfig\FtpConfig\bin\Debug\FtpConfig.exe.config

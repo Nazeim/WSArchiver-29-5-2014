@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71A10576-9354-4290-AF63-F2FEEB92C3D3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WSArchiver</RootNamespace>
+    <AssemblyName>DigitalDocument</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>WebSight logo blue33.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MigraDoc.DocumentObjectModel">
+      <HintPath>..\..\DigitalDocument\WSArchiver - Before Upgradin framework\WSArchiver\bin\Release\MigraDoc.DocumentObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering">
+      <HintPath>..\..\DigitalDocument\WSArchiver - Before Upgradin framework\WSArchiver\bin\Release\MigraDoc.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\DigitalDocument\WSArchiver - Before Upgradin framework\WSArchiver\bin\Release\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureApp">
+      <HintPath>..\..\DigitalDocument\WSArchiver - Before Upgradin framework\WSArchiver\bin\Release\SecureApp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Archive\AdvancedSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Archive\AdvancedSearchForm.designer.cs">
+      <DependentUpon>AdvancedSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Archive\ArchiveParentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Archive\ArchiveParentForm.designer.cs">
+      <DependentUpon>ArchiveParentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Archiving\ImagesViwerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Archiving\ImagesViwerForm.Designer.cs">
+      <DependentUpon>ImagesViwerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Archive\SimpleSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Archive\SimpleSearchForm.designer.cs">
+      <DependentUpon>SimpleSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Archiving\ArchivingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Archiving\ArchivingForm.designer.cs">
+      <DependentUpon>ArchivingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Archiving\ChangeFileNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Archiving\ChangeFileNameForm.designer.cs">
+      <DependentUpon>ChangeFileNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Archiving\EFilesArchivingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Archiving\EFilesArchivingForm.designer.cs">
+      <DependentUpon>EFilesArchivingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Archiving\PaperArchivingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Archiving\PaperArchivingForm.designer.cs">
+      <DependentUpon>PaperArchivingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Archiving\ScanningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Archiving\ScanningForm.Designer.cs">
+      <DependentUpon>ScanningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Archiving\ScanningSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Archiving\ScanningSettingsForm.Designer.cs">
+      <DependentUpon>ScanningSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Category\CategoryEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Category\CategoryEditForm.designer.cs">
+      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Category\CategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Category\CategoryForm.designer.cs">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ChangePasswordForm.designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Destinations\DestinationEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Destinations\DestinationEditForm.designer.cs">
+      <DependentUpon>DestinationEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Destinations\DocDestinationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Destinations\DocDestinationForm.designer.cs">
+      <DependentUpon>DocDestinationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DialogParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DialogParent.Designer.cs">
+      <DependentUpon>DialogParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GeneralFile\GeneralFileEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GeneralFile\GeneralFileEditForm.designer.cs">
+      <DependentUpon>GeneralFileEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GeneralFile\GeneralFilesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GeneralFile\GeneralFilesForm.designer.cs">
+      <DependentUpon>GeneralFilesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LogFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LogFileForm.designer.cs">
+      <DependentUpon>LogFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LogInForm.designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ParentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ParentForm.Designer.cs">
+      <DependentUpon>ParentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Party\PartyEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Party\PartyEditForm.designer.cs">
+      <DependentUpon>PartyEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Party\PartyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Party\PartyForm.designer.cs">
+      <DependentUpon>PartyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SettingsForm.designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Tree\ContainerTreeNode.cs" />
+    <Compile Include="GUI\Tree\LeafTreeNode.cs" />
+    <Compile Include="GUI\UserControls\CategoriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\CategoriesControl.Designer.cs">
+      <DependentUpon>CategoriesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\CheckedGroupBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\CheckedGroupBox.Designer.cs">
+      <DependentUpon>CheckedGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\ComboBoxCheckedGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ComboBoxCheckedGroup.Designer.cs">
+      <DependentUpon>ComboBoxCheckedGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\ComboBoxSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ComboBoxSearchControl.Designer.cs">
+      <DependentUpon>ComboBoxSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\DateRangeCheckedGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\DateRangeCheckedGroup.Designer.cs">
+      <DependentUpon>DateRangeCheckedGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\DateRangeSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\DateRangeSearchControl.Designer.cs">
+      <DependentUpon>DateRangeSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\DocumentDetailsListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\DocumentDetailsListItem.Designer.cs">
+      <DependentUpon>DocumentDetailsListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\EnhancedLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\EnhancedLabel.Designer.cs">
+      <DependentUpon>EnhancedLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\IMultiLingualControl.cs" />
+    <Compile Include="GUI\UserControls\MultilineStringCheckedGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\MultilineStringCheckedGroup.Designer.cs">
+      <DependentUpon>MultilineStringCheckedGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\MultilineStringSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\MultilineStringSearchControl.Designer.cs">
+      <DependentUpon>MultilineStringSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\MultipleItemsCheckedGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\MultipleItemsCheckedGroup.Designer.cs">
+      <DependentUpon>MultipleItemsCheckedGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\MultipleItemsSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\MultipleItemsSearchControl.Designer.cs">
+      <DependentUpon>MultipleItemsSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\NumericUpDownCheckedGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\NumericUpDownCheckedGroup.Designer.cs">
+      <DependentUpon>NumericUpDownCheckedGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\NumericUpDownSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\NumericUpDownSearchControl.Designer.cs">
+      <DependentUpon>NumericUpDownSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\SearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\SearchControl.Designer.cs">
+      <DependentUpon>SearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\SinglelineStringCheckedGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\SinglelineStringCheckedGroup.Designer.cs">
+      <DependentUpon>SinglelineStringCheckedGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\SingleLineStringSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\SingleLineStringSearchControl.Designer.cs">
+      <DependentUpon>SingleLineStringSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\NoWheelDocumentPreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\NoWheelDocumentPreview.Designer.cs">
+      <DependentUpon>NoWheelDocumentPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\TreeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\TreeControl.designer.cs">
+      <DependentUpon>TreeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\AssignPermissionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\AssignPermissionsForm.Designer.cs">
+      <DependentUpon>AssignPermissionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\UserEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\UserEditForm.designer.cs">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\UsersForm.designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="GUI\AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Archive\AdvancedSearchForm.resx">
+      <DependentUpon>AdvancedSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Archive\ArchiveParentForm.resx">
+      <DependentUpon>ArchiveParentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Archiving\ImagesViwerForm.resx">
+      <DependentUpon>ImagesViwerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Archive\SimpleSearchForm.resx">
+      <DependentUpon>SimpleSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Archiving\ArchivingForm.resx">
+      <DependentUpon>ArchivingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Archiving\ChangeFileNameForm.resx">
+      <DependentUpon>ChangeFileNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Archiving\EFilesArchivingForm.resx">
+      <DependentUpon>EFilesArchivingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Archiving\PaperArchivingForm.resx">
+      <DependentUpon>PaperArchivingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Archiving\ScanningForm.resx">
+      <DependentUpon>ScanningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Archiving\ScanningSettingsForm.resx">
+      <DependentUpon>ScanningSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Category\CategoryEditForm.resx">
+      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Category\CategoryForm.resx">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Destinations\DestinationEditForm.resx">
+      <DependentUpon>DestinationEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Destinations\DocDestinationForm.resx">
+      <DependentUpon>DocDestinationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DialogParent.resx">
+      <DependentUpon>DialogParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GeneralFile\GeneralFileEditForm.resx">
+      <DependentUpon>GeneralFileEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GeneralFile\GeneralFilesForm.resx">
+      <DependentUpon>GeneralFilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LogFileForm.resx">
+      <DependentUpon>LogFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ParentForm.resx">
+      <DependentUpon>ParentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Party\PartyEditForm.resx">
+      <DependentUpon>PartyEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Party\PartyForm.resx">
+      <DependentUpon>PartyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\CategoriesControl.resx">
+      <DependentUpon>CategoriesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\CheckedGroupBox.resx">
+      <DependentUpon>CheckedGroupBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\ComboBoxCheckedGroup.resx">
+      <DependentUpon>ComboBoxCheckedGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\ComboBoxSearchControl.resx">
+      <DependentUpon>ComboBoxSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\DateRangeCheckedGroup.resx">
+      <DependentUpon>DateRangeCheckedGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\DateRangeSearchControl.resx">
+      <DependentUpon>DateRangeSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\DocumentDetailsListItem.resx">
+      <DependentUpon>DocumentDetailsListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\EnhancedLabel.resx">
+      <DependentUpon>EnhancedLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\MultilineStringCheckedGroup.resx">
+      <DependentUpon>MultilineStringCheckedGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\MultilineStringSearchControl.resx">
+      <DependentUpon>MultilineStringSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\MultipleItemsCheckedGroup.resx">
+      <DependentUpon>MultipleItemsCheckedGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\MultipleItemsSearchControl.resx">
+      <DependentUpon>MultipleItemsSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\NumericUpDownCheckedGroup.resx">
+      <DependentUpon>NumericUpDownCheckedGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\NumericUpDownSearchControl.resx">
+      <DependentUpon>NumericUpDownSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\SearchControl.resx">
+      <DependentUpon>SearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\SinglelineStringCheckedGroup.resx">
+      <DependentUpon>SinglelineStringCheckedGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\SingleLineStringSearchControl.resx">
+      <DependentUpon>SingleLineStringSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\TreeControl.resx">
+      <DependentUpon>TreeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\AssignPermissionsForm.resx">
+      <DependentUpon>AssignPermissionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\UserEditForm.resx">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\WSArchiver.Common.DocumentVO.datasource" />
+    <None Include="Properties\DataSources\WSArchiver.Common.FileVO.datasource" />
+    <None Include="Properties\DataSources\WSArchiver.Common.LogEntryVO.datasource" />
+    <None Include="Properties\DataSources\WSArchiver.Common.PartyVO.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MigraDoc.DocumentObjectModel.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MigraDoc.Rendering.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PdfSharp.Charting.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PdfSharp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\green_light.png" />
+    <None Include="Resources\red_light %282%29.png" />
+    <Content Include="SecureApp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\gnome_zoom_out %281%29.png" />
+    <None Include="Resources\gnome_zoom_in.png" />
+    <None Include="Resources\gnome_zoom_fit_best.png" />
+    <None Include="Resources\save_48.png" />
+    <None Include="Resources\key_48.png" />
+    <None Include="Resources\scanner_camera_folder_2.png" />
+    <None Include="Resources\document_48.png" />
+    <None Include="Resources\Hardware-Scanner-1-icon.png" />
+    <None Include="Resources\opened.png" />
+    <None Include="Resources\WebSight.ico" />
+    <None Include="Resources\aqua_smooth_folder_documents.png" />
+    <None Include="Resources\configuration_settings.png" />
+    <None Include="Resources\delete_64.png" />
+    <None Include="Resources\Document.png" />
+    <None Include="Resources\Documents.png" />
+    <None Include="Resources\edit_find.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\folder_blue_users.png" />
+    <None Include="Resources\mydocuments.png" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\plus_64.png" />
+    <None Include="Resources\Portfolio.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\search_artdesigner_lv %281%29.png" />
+    <None Include="Resources\system_lock_screen.png" />
+    <None Include="Resources\tick_64.png" />
+    <None Include="Resources\user_64.png" />
+    <None Include="Resources\User-Files-icon.png" />
+    <None Include="Resources\users_black.png" />
+    <None Include="Resources\my-documents-folder.png" />
+    <Resource Include="WebSight logo blue33.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{1C4D336B-4DF4-42AE-9D23-AA5B64060F17}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
